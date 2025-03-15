@@ -4,7 +4,7 @@ import plotly.express as px
 
 orders = pd.read_csv("data/orders_dataset_cleaned.csv")
 customers = pd.read_csv("data/customers_dataset.csv")
-geolocation = pd.read_csv("data/geolocation_dataset.csv")
+geolocation = pd.read_csv("data/geolocation_cleaned.csv")
 
 orders_customers = orders.merge(customers, on="customer_id", how="left")
 
