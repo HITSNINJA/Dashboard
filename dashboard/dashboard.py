@@ -31,12 +31,12 @@ st.plotly_chart(fig_order_hour)
 
 st.header("Wilayah dengan transaksi terbanyak")
 top_cities = orders_customers["customer_city"].value_counts().head(10)
-fig_top_cities = px.bar(top_cities, x=top_cities.index, y=top_cities.values, title="Top 10 Kota dengan Penggunaan E-Commerce")
+fig_top_cities = px.bar(top_cities, x=top_cities.index, y=top_cities.values, title="Top 10 Kota dengan transaksi terbanyak")
 st.plotly_chart(fig_top_cities)
 
 st.header("Wilayah dengan transaksi tersedikit")
 bottom_cities = orders_customers["customer_city"].value_counts().tail(10)
-fig_bottom_cities = px.bar(bottom_cities, x=bottom_cities.index, y=bottom_cities.values, title="10 Kota dengan Penggunaan E-Commerce Terendah")
+fig_bottom_cities = px.bar(bottom_cities, x=bottom_cities.index, y=bottom_cities.values, title="10 Kota dengan transaksi tersedikit")
 st.plotly_chart(fig_bottom_cities)
 
 st.header("Analisis Geospatial")
